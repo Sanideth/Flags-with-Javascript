@@ -5,11 +5,11 @@ const url = "https://restcountries.com/v2/all";
 const countriesEl = document.getElementById("countries");
 const searchEl = document.getElementById("search");
 const filterEl = document.getElementById("filter");
+const listButtons = document.querySelectorAll("li");
 
 const getCountries = async () => {
   const res = await fetch(url);
   const data = await res.json();
-  console.log(data);
   displayCountries(data);
 };
 
@@ -24,7 +24,7 @@ const displayCountries = (data) => {
       "bg-white",
       "shadow-sm",
       "overflow-hidden",
-      "max-w-[300px]",
+      "w-[300px]",
       "mb-3"
     );
     countryEl.innerHTML = `<div>
@@ -35,7 +35,7 @@ const displayCountries = (data) => {
         <p class="text-sm">
           <strong>Population:</strong>${item.population}
         </p>
-        <p class="text-sm">
+        <p class="text-sm region">
           <strong>Region:</strong>${item.region}
         </p>
         <p class="text-sm">
@@ -49,9 +49,7 @@ const displayCountries = (data) => {
 
 searchEl.addEventListener("input", (e) => {
   const value = e.target.value;
-
   const countryNames = document.querySelectorAll(".heading");
-
   countryNames.forEach((name) => {
     if (name.innerText.toLowerCase().includes(value.toLowerCase())) {
       name.parentElement.parentElement.style.display = "block";
@@ -64,4 +62,19 @@ searchEl.addEventListener("input", (e) => {
 filterEl.addEventListener("click", (e) => {
   const filterList = document.getElementById("filter-list");
   filterList.classList.toggle("hidden");
+});
+
+listButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const countryRegions = document.querySelectorAll(".region");
+    countryRegions.forEach((name) => {
+      if (
+        name.innerText.toLowerCase().includes(button.innerText.toLowerCase())
+      ) {
+        name.parentElement.parentElement.style.display = "block";
+      } else {
+        name.parentElement.parentElement.style.display = "none";
+      }
+    });
+  });
 });

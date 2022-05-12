@@ -24,16 +24,26 @@
           List of countries with flags and data
         </h1>
         <div class="container flex justify-between">
-          <input type="text" placeholder="Search By Country" class="rounded p-4 text-sm border-none shadow-sm min-w-[300px]">
-          <div class="rounded bg-white shadow-inner p-4 relative text-sm">
+          <input type="text" placeholder="Search By Country" id="search" class="rounded p-4 text-sm border-none shadow-sm min-w-[300px]">
+          <div class="rounded bg-white shadow-inner p-4 relative text-sm cursor-pointer" id="filter">
             Filter By Region
             <i class="fa-solid fa-chevron-down ml-2"></i>
-            <ul class="rounded bg-white shadow-inner p-4 absolute top-14 left-0 w-full hidden">
-              <li class="my-1">Africa</li>
-              <li class="my-1">America</li>
-              <li class="my-1">Asia</li>
-              <li class="my-1">Europe</li>
-              <li class="my-1">Oceania</li>
+            <ul class="rounded bg-white shadow-inner p-4 absolute top-14 left-0 w-full hidden" id="filter-list">
+              <li class="my-1 hover:bg-gray-200 hover:rounded transition-all duration-300">
+                Africa
+              </li>
+              <li class="my-1 hover:bg-gray-200 hover:rounded transition-all duration-300">
+                America
+              </li>
+              <li class="my-1 hover:bg-gray-200 hover:rounded transition-all duration-300">
+                Asia
+              </li>
+              <li class="my-1 hover:bg-gray-200 hover:rounded transition-all duration-300">
+                Europe
+              </li>
+              <li class="my-1 hover:bg-gray-200 hover:rounded transition-all duration-300">
+                Oceania
+              </li>
             </ul>
           </div>
         </div>

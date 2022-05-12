@@ -7,6 +7,9 @@ module.exports = {
           "linear-gradient(to right bottom, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('../img/hero.jpg')",
       },
     },
+    fontFamily: {
+      main: ["Nunito Sans", "sans-serif"],
+    },
   },
   plugins: [],
 };

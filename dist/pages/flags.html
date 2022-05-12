@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="/index.77a9bc14.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script module="" src="/pages/flags.de5c0784.js"></script>
     <title>Flags</title>
   </head>
@@ -17,7 +19,45 @@
           <a href="/pages/contact.html" class="text-white hover:brightness-100 transition-all">Contacts</a>
         </nav>
       </header>
-      <main class="h-[calc(100vh-82px)] pt-52 px-32"></main>
+      <main class="h-[calc(100vh-82px)] p-10">
+        <h1 class="text-4xl text-white font-bold">
+          List of countries with flags and data
+        </h1>
+        <div class="container flex justify-between">
+          <input type="text" placeholder="Search By Country" class="rounded p-4 text-sm border-none shadow-sm min-w-[300px]">
+          <div class="rounded bg-white shadow-sm p-4 relative text-sm">
+            Filter By Region
+            <i class="fa-solid fa-chevron-down ml-2"></i>
+            <ul class="rounded bg-white shadow-sm p-4 absolute top-14 left-0 w-full hidden">
+              <li class="my-1">Africa</li>
+              <li class="my-1">America</li>
+              <li class="my-1">Asia</li>
+              <li class="my-1">Europe</li>
+              <li class="my-1">Oceania</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-between mt-8">
+          <div class="rounded bg-white shadow-sm overflow-hidden max-w-[300px] mb-3">
+            <div><img src="https://flagcdn.com/de.svg" alt=""></div>
+            <div class="p-5">
+              <h2 class="font-bold text-lg">Germany</h2>
+              <p class="text-sm"><strong>Population:</strong>4324342</p>
+              <p class="text-sm"><strong>Region:</strong>Europe</p>
+              <p class="text-sm"><strong>Capital:</strong>Berlin</p>
+            </div>
+          </div>
+          <div class="rounded bg-white shadow-sm overflow-hidden max-w-[300px] mb-3">
+            <div><img src="https://flagcdn.com/de.svg" alt=""></div>
+            <div class="p-5">
+              <h2 class="font-bold text-lg">Germany</h2>
+              <p class="text-sm"><strong>Population:</strong>4324342</p>
+              <p class="text-sm"><strong>Region:</strong>Europe</p>
+              <p class="text-sm"><strong>Capital:</strong>Berlin</p>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>

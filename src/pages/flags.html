@@ -10,36 +10,28 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-    <script module src="../js/index.js"></script>
+    <script type="module" src="../js/index.js"></script>
     <title>Flags</title>
   </head>
-  <body>
-    <div
-      class="h-screen w-screen bg-black bg-hero-pattern bg-cover bg-center bg-opacity-50"
-    >
+  <body class="bg-gray-100">
+    <div class="h-screen w-screen">
       <header
-        class="p-7 flex justify-end border-b-2 border-white w-10/12 mx-auto"
+        class="p-7 flex justify-end border-b-2 border-black w-10/12 mx-auto"
       >
         <nav class="flex">
-          <a
-            href="/"
-            class="text-white mr-3 hover:brightness-100 transition-all"
-            >Home</a
-          >
+          <a href="/" class="mr-3 hover:brightness-100 transition-all">Home</a>
           <a
             href="./flags.html"
-            class="text-white mr-3 hover:brightness-100 transition-all"
+            class="mr-3 hover:brightness-100 transition-all"
             >Flags</a
           >
-          <a
-            href="./contact.html"
-            class="text-white hover:brightness-100 transition-all"
+          <a href="./contact.html" class="hover:brightness-100 transition-all"
             >Contacts</a
           >
         </nav>
       </header>
       <main class="h-[calc(100vh-82px)] p-10">
-        <h1 class="text-4xl text-white font-bold">
+        <h1 class="text-4xl font-bold">
           List of countries with flags and data
         </h1>
         <div class="container flex justify-between">
@@ -48,11 +40,11 @@
             placeholder="Search By Country"
             class="rounded p-4 text-sm border-none shadow-sm min-w-[300px]"
           />
-          <div class="rounded bg-white shadow-sm p-4 relative text-sm">
+          <div class="rounded bg-white shadow-inner p-4 relative text-sm">
             Filter By Region
             <i class="fa-solid fa-chevron-down ml-2"></i>
             <ul
-              class="rounded bg-white shadow-sm p-4 absolute top-14 left-0 w-full hidden"
+              class="rounded bg-white shadow-inner p-4 absolute top-14 left-0 w-full hidden"
             >
               <li class="my-1">Africa</li>
               <li class="my-1">America</li>
@@ -62,29 +54,8 @@
             </ul>
           </div>
         </div>
-        <div class="flex flex-wrap justify-between mt-8">
-          <div
-            class="rounded bg-white shadow-sm overflow-hidden max-w-[300px] mb-3"
-          >
-            <div><img src="https://flagcdn.com/de.svg" alt="" /></div>
-            <div class="p-5">
-              <h2 class="font-bold text-lg">Germany</h2>
-              <p class="text-sm"><strong>Population:</strong>4324342</p>
-              <p class="text-sm"><strong>Region:</strong>Europe</p>
-              <p class="text-sm"><strong>Capital:</strong>Berlin</p>
-            </div>
-          </div>
-          <div
-            class="rounded bg-white shadow-sm overflow-hidden max-w-[300px] mb-3"
-          >
-            <div><img src="https://flagcdn.com/de.svg" alt="" /></div>
-            <div class="p-5">
-              <h2 class="font-bold text-lg">Germany</h2>
-              <p class="text-sm"><strong>Population:</strong>4324342</p>
-              <p class="text-sm"><strong>Region:</strong>Europe</p>
-              <p class="text-sm"><strong>Capital:</strong>Berlin</p>
-            </div>
-          </div>
+        <div class="flex flex-wrap justify-between mt-8" id="countries">
+          <p>Loading data... Please Wait!</p>
         </div>
       </main>
     </div>
